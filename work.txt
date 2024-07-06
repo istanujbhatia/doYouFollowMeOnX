@@ -1,0 +1,160 @@
+
+
+//followers
+
+// curl 'https://x.com/i/api/1.1/friends/following/list.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&include_ext_profile_image_shape=1&skip_status=1&cursor=-1&user_id=1493806300567781379&count=3&with_total_count=true' \
+//   -H 'accept: */*' \
+//   -H 'accept-language: en-US,en;q=0.9,hi;q=0.8' \
+//   -H 'authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' \
+//   -H 'cookie: guest_id=v1%3A171880735142245286; night_mode=2; guest_id_marketing=v1%3A171880735142245286; guest_id_ads=v1%3A171880735142245286; ext_name=ojplmecpdpgccookcobabopnaifgidhf; _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; ads_prefs="LBISAAA="; g_state={"i_l":0}; kdt=5NYGhhDHa3YwwsDvR9jPdJ4CHB96CTkFPEFrwP5p; auth_token=872380294db981b29a36191765c583c4406099c1; ct0=8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef; lang=en; twid=u%3D1493806300567781379; personalization_id="v1_snfA944upNScMiaarSXuGw=="' \
+//   -H 'dnt: 1' \
+//   -H 'priority: u=1, i' \
+//   -H 'referer: https://x.com/istanujbhatia/following' \
+//   -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"' \
+//   -H 'sec-ch-ua-mobile: ?0' \
+//   -H 'sec-ch-ua-platform: "Linux"' \
+//   -H 'sec-fetch-dest: empty' \
+//   -H 'sec-fetch-mode: cors' \
+//   -H 'sec-fetch-site: same-origin' \
+//   -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+//   -H 'x-client-transaction-id: t2eUQMbeL0HVORoO4sb8yvZ+Mow0/PYX6e3AskpNRNrEzAjS8tCDQnoTZ8Zc66O3FGdrjrUqiOQkIUu0JEoiQqsUfeRxtA' \
+//   -H 'x-client-uuid: adb0058a-0330-46a6-97b3-960cac746e81' \
+//   -H 'x-csrf-token: 8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef' \
+//   -H 'x-twitter-active-user: yes' \
+//   -H 'x-twitter-auth-type: OAuth2Session' \
+//   -H 'x-twitter-client-language: en'
+
+ 
+
+// check followed by to see either followed or not
+
+
+
+
+//followings
+
+// curl 'https://api.twitter.com/1.1/friends/ids.json?include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&include_ext_profile_image_shape=1&skip_status=1&cursor=-1&user_id=1493806300567781379&count=3&with_total_count=true' \
+//   -H 'accept: */*' \
+//   -H 'accept-language: en-US,en;q=0.9,hi;q=0.8' \
+//   -H 'authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' \
+//   -H 'cookie: guest_id=v1%3A171880735142245286; night_mode=2; guest_id_marketing=v1%3A171880735142245286; guest_id_ads=v1%3A171880735142245286; ext_name=ojplmecpdpgccookcobabopnaifgidhf; _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; ads_prefs="LBISAAA="; g_state={"i_l":0}; kdt=5NYGhhDHa3YwwsDvR9jPdJ4CHB96CTkFPEFrwP5p; auth_token=872380294db981b29a36191765c583c4406099c1; ct0=8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef; lang=en; twid=u%3D1493806300567781379; personalization_id="v1_Allnm7I9MmSs7ZD82U9TYQ=="' \
+//   -H 'dnt: 1' \
+//   -H 'priority: u=1, i' \
+//   -H 'referer: https://x.com/istanujbhatia/verified_followers' \
+//   -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"' \
+//   -H 'sec-ch-ua-mobile: ?0' \
+//   -H 'sec-ch-ua-platform: "Linux"' \
+//   -H 'sec-fetch-dest: empty' \
+//   -H 'sec-fetch-mode: cors' \
+//   -H 'sec-fetch-site: same-origin' \
+//   -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+//   -H 'x-client-transaction-id: p0J7uZzuE2k4xxMn5/HlUdvNv2uRszPbkwIT6PqK0GDW3ViQck1h1CTrnJPBjTK1qpNAnqUWzMQuQgEU5l+twQiZ94jDpA' \
+//   -H 'x-client-uuid: adb0058a-0330-46a6-97b3-960cac746e81' \
+//   -H 'x-csrf-token: 8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef' \
+//   -H 'x-twitter-active-user: yes' \
+//   -H 'x-twitter-auth-type: OAuth2Session' \
+// //   -H 'x-twitter-client-language: en'
+
+
+
+
+
+
+
+
+
+//create friend 
+
+// curl 'https://x.com/i/api/1.1/friendships/create.json' \
+//   -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"' \
+//   -H 'DNT: 1' \
+//   -H 'x-twitter-client-language: en' \
+//   -H 'x-csrf-token: 8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef' \
+//   -H 'sec-ch-ua-mobile: ?0' \
+//   -H 'authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' \
+//   -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+//   -H 'content-type: application/x-www-form-urlencoded' \
+//   -H 'Referer: https://x.com/istanujbhatia/followers' \
+//   -H 'x-client-transaction-id: +kda6ws5+TT71znf50Ys3GMKbpAuweEn7ch0WbR4Ln4LA+p7W3nYBBcVzeffuWQvK9YSw/itUm9fgmaNvG4kW90bRUBU+Q' \
+//   -H 'x-twitter-auth-type: OAuth2Session' \
+//   -H 'X-Client-UUID: adb0058a-0330-46a6-97b3-960cac746e81' \
+//   -H 'x-twitter-active-user: yes' \
+//   -H 'sec-ch-ua-platform: "Linux"' \
+//   --data-raw 'include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&include_ext_profile_image_shape=1&skip_status=1&user_id=18623942'
+
+
+
+
+
+
+
+
+//destroy friend 
+
+// curl 'https://x.com/i/api/1.1/friendships/destroy.json' \
+//   -H 'accept: */*' \
+//   -H 'accept-language: en-US,en;q=0.9,hi;q=0.8' \
+//   -H 'authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' \
+//   -H 'content-type: application/x-www-form-urlencoded' \
+//   -H 'cookie: guest_id=v1%3A171880735142245286; night_mode=2; guest_id_marketing=v1%3A171880735142245286; guest_id_ads=v1%3A171880735142245286; ext_name=ojplmecpdpgccookcobabopnaifgidhf; _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; ads_prefs="LBISAAA="; g_state={"i_l":0}; kdt=5NYGhhDHa3YwwsDvR9jPdJ4CHB96CTkFPEFrwP5p; auth_token=872380294db981b29a36191765c583c4406099c1; ct0=8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef; lang=en; twid=u%3D1493806300567781379; personalization_id="v1_Bb1EN8ujVCUU1MF/2AB/eA=="' \
+//   -H 'dnt: 1' \
+//   -H 'origin: https://x.com' \
+//   -H 'priority: u=1, i' \
+//   -H 'referer: https://x.com/istanujbhatia/followers' \
+//   -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"' \
+//   -H 'sec-ch-ua-mobile: ?0' \
+//   -H 'sec-ch-ua-platform: "Linux"' \
+//   -H 'sec-fetch-dest: empty' \
+//   -H 'sec-fetch-mode: cors' \
+//   -H 'sec-fetch-site: same-origin' \
+//   -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+//   -H 'x-client-transaction-id: qhcKu1tpqWSrh2mPtxZ8jDNaPsB+kbF3vZgkCeQofi5bU7orCymIVEdFnbeP6TR/e/xCk6jORKHbtZf0qW9i5djPipcUqQ' \
+//   -H 'x-client-uuid: adb0058a-0330-46a6-97b3-960cac746e81' \
+//   -H 'x-csrf-token: 8b0c88362fb4eef3a5daf28b1e2800aacd6b6c9756c08bf7a6e14541dde7167603851b1c2d9a0ec3f9ec5e42e9eb0a645037c6e57e1f0df455b63cab74447975d7c692387451ed2f66ed8665246bbaef' \
+//   -H 'x-twitter-active-user: yes' \
+//   -H 'x-twitter-auth-type: OAuth2Session' \
+//   -H 'x-twitter-client-language: en' \
+//   --data-raw 'include_profile_interstitial_type=1&include_blocking=1&include_blocked_by=1&include_followed_by=1&include_want_retweets=1&include_mute_edge=1&include_can_dm=1&include_can_media_tag=1&include_ext_is_blue_verified=1&include_ext_verified_type=1&include_ext_profile_image_shape=1&skip_status=1&user_id=1765310768986157056'
+
+
+
+//to check connection between a authorized user and the user specified 
+
+
+
+https://api.twitter.com/1.1/friendships/lookup.json?screen_name=onetooneandonto
+
+
+
+
+//auth
+
+curl 'https://api.x.com/1.1/onboarding/task.json' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9,hi;q=0.8' \
+  -H 'authorization: Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA' \
+  -H 'content-type: application/json' \
+  -H 'cookie: night_mode=2; ads_prefs="LBISAAA="; kdt=5NYGhhDHa3YwwsDvR9jPdJ4CHB96CTkFPEFrwP5p; lang=en; dnt=1; guest_id=v1%3A172027473596516621; guest_id_marketing=v1%3A172027473596516621; guest_id_ads=v1%3A172027473596516621; gt=1809589516736303367; auth_token=ef2685712fa648e375b3b67603e9255a6d55bb4e; ct0=e426693e00749b0fcd143cbdddf35d57ee5255a05cd2624041b9b17d99ebc62ee9284f38abf18db0cf0ad499eb3dcf8b14371dffe46838335d4f84a99952ccfc81d3d699c1bcc8b3c9d1f33791338fbc; twid=u%3D1493806300567781379; att=1-CoElLGk7Vfw1m4gyK1m1ufTGiTtXqDwxxjSkW5Gl; personalization_id="v1_aBC+S9WTh2P/zPdylROSuw=="' \
+  -H 'dnt: 1' \
+  -H 'origin: https://x.com' \
+  -H 'priority: u=1, i' \
+  -H 'referer: https://x.com/' \
+  -H 'sec-ch-ua: "Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' \
+  -H 'x-client-transaction-id: lrzNKo2S6Www7+Dk9GhuhG7rRYZ4ITil6KAZk70DdyRDkiEl2bol//qsng/Zya4I21J6r5TAcN+wF0NqgYAtBywIgpjZlQ' \
+  -H 'x-csrf-token: e426693e00749b0fcd143cbdddf35d57ee5255a05cd2624041b9b17d99ebc62ee9284f38abf18db0cf0ad499eb3dcf8b14371dffe46838335d4f84a99952ccfc81d3d699c1bcc8b3c9d1f33791338fbc' \
+  -H 'x-twitter-active-user: yes' \
+  -H 'x-twitter-auth-type: OAuth2Session' \
+  -H 'x-twitter-client-language: en' \
+  --data-raw '{"flow_token":"u;1493806300567781379:-1720274980235:9tRaMviQPwbcaVDCixZXvTCb:8","subtask_inputs":[{"subtask_id":"AccountDuplicationCheck","check_logged_in_account":{"link":"AccountDuplicationCheck_true"}}]}'
+
+
+
+
+
+  
